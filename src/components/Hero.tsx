@@ -18,8 +18,8 @@ export default function Hero() {
 
         {/* Get Started Button */}
         <Link
-          href="/quiz/1" // Adjust this to your first quiz or a "Get Started" page
-          className="bg-white text-blue-600 py-3 px-6 rounded-lg shadow-md font-semibold hover:bg-blue-100 transition"
+          href="/quiz"
+          className="bg-white text-black py-3 px-6 rounded-lg shadow-md font-semibold hover:bg-white/80 transition"
         >
           Get Started
         </Link>

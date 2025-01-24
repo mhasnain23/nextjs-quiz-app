@@ -6,6 +6,7 @@ import Timer from "@/components/Timer";
 import ProgressBar from "@/components/ProgressBar";
 import Results from "@/components/result";
 import { toast } from "sonner";
+import Confetti from "react-confetti";
 
 const QuizPage = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -13,6 +14,7 @@ const QuizPage = () => {
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
   const [showResults, setShowResults] = useState(false);
   const [isAnswered, setIsAnswered] = useState(false);
+  const [showConfetti, setShowConfetti] = useState(false); // New state for confetti
 
   const handleAnswerSelect = (answer: string) => {
     if (isAnswered) return;
@@ -48,6 +50,14 @@ const QuizPage = () => {
     setSelectedAnswer(null);
     setShowResults(false);
     setIsAnswered(false);
+    setShowConfetti(false); // Reset confetti state
+  };
+
+  const handleShowConfetti = () => {
+    setShowConfetti(true);
+    setTimeout(() => {
+      setShowConfetti(false); // Stop confetti after 5 seconds
+    }, 8000);
   };
 
   if (showResults) {
@@ -57,7 +67,17 @@ const QuizPage = () => {
           score={score}
           totalQuestions={quizQuestions.length}
           onRestart={handleRestart}
+          handleShowConfetti={handleShowConfetti}
         />
+
+        {showConfetti && (
+          <Confetti
+            width={window.innerWidth}
+            height={window.innerHeight}
+            numberOfPieces={300}
+            gravity={0.3}
+          />
+        )}
       </div>
     );
   }
@@ -105,10 +125,6 @@ const QuizPage = () => {
             ))}
           </div>
         </div>
-        <p className="text-center text-gray-600 mt-4">
-          Score: <span className="font-semibold">{score}</span> /{" "}
-          {quizQuestions.length}
-        </p>
       </div>
     </div>
   );

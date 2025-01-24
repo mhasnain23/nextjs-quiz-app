@@ -21,15 +21,13 @@ export default function Navbar() {
           <DropdownMenuTrigger className="text-lg font-medium hover:underline focus:outline-none">
             Available Quizzes
           </DropdownMenuTrigger>
-          {/* <DropdownMenuContent className="bg-white text-black shadow-lg">
-            {quizzes.map((quiz) => (
-              <DropdownMenuItem key={quiz.id}>
-                <Link href={`/quiz/${quiz.id}`} className="hover:text-blue-500">
-                  {quiz.title}
-                </Link>
-              </DropdownMenuItem>
-            ))}
-          </DropdownMenuContent> */}
+          <DropdownMenuContent className="bg-white text-black shadow-lg">
+            <DropdownMenuItem>
+              <Link href={`/quiz`} className="hover:text-blue-500">
+                Next.js Intermediate quiz
+              </Link>
+            </DropdownMenuItem>
+          </DropdownMenuContent>
         </DropdownMenu>
       </div>
     </nav>

@@ -3,11 +3,13 @@ import { Button } from "@/components/ui/button";
 interface ResultsProps {
   score: number;
   totalQuestions: number;
+  handleShowConfetti: () => void;
   onRestart: () => void;
 }
 const Results: React.FC<ResultsProps> = ({
   score,
   totalQuestions,
+  handleShowConfetti,
   onRestart,
 }) => {
   const percentage = (score / totalQuestions) * 100;
@@ -30,7 +32,16 @@ const Results: React.FC<ResultsProps> = ({
           </p>
         )}
       </div>
-      <Button onClick={onRestart}>Try Again</Button>
+      {/* Button to show confetti */}
+      <div className="flex items-center justify-center gap-5">
+        <button
+          onClick={handleShowConfetti}
+          className="px-5 py-2 bg-blue-600 text-white font-bold rounded-md hover:bg-blue-700 transition"
+        >
+          Celebrate 🎉
+        </button>
+        <Button onClick={onRestart}>Try Again</Button>
+      </div>
     </div>
   );
 };
