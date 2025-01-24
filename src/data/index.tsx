@@ -155,162 +155,212 @@ export interface QuizQuestion {
 export const quizQuestions: QuizQuestion[] = [
   {
     id: 1,
-    question: "What is the time complexity of binary search?",
-    options: ["O(n)", "O(log n)", "O(n log n)", "O(1)"],
-    correctAnswer: "O(log n)",
+    question: "What is a key feature introduced in Next.js 14?",
+    options: [
+      "Support for Server Actions",
+      "Automatic TypeScript Setup",
+      "Built-in Redux Integration",
+    ],
+    correctAnswer: "Support for Server Actions",
   },
   {
     id: 2,
-    question: "Which hook is used for side effects in React?",
-    options: ["useState", "useEffect", "useContext", "useReducer"],
-    correctAnswer: "useEffect",
+    question:
+      "What is the purpose of the `Server Actions` feature in Next.js 14?",
+    options: [
+      "To handle client-side routing",
+      "To simplify server-side logic within React components",
+      "To enable caching for static assets",
+    ],
+    correctAnswer: "To simplify server-side logic within React components",
   },
   {
     id: 3,
-    question: "What is closure in JavaScript?",
-    options: [
-      "A way to close browser windows",
-      "A function that has access to variables in its outer scope",
-      "A method to close database connections",
-      "A way to end loops",
-    ],
-    correctAnswer: "A function that has access to variables in its outer scope",
+    question:
+      "Which file structure is now used by default in Next.js 14 for routing?",
+    options: ["Pages directory", "App directory", "API directory"],
+    correctAnswer: "App directory",
   },
   {
     id: 4,
-    question: "What is the purpose of the 'key' prop in React lists?",
+    question:
+      "What does the `next/font` package introduced in Next.js 14 enable?",
     options: [
-      "It's just for naming conventions",
-      "To help React identify which items have changed",
-      "To style list items",
-      "To count list items",
+      "Dynamic font imports from external sources",
+      "Improved font optimization and automatic loading",
+      "Automatic font caching on the client side",
     ],
-    correctAnswer: "To help React identify which items have changed",
+    correctAnswer: "Improved font optimization and automatic loading",
   },
   {
     id: 5,
-    question: "What is the difference between 'let' and 'const'?",
+    question: "What major upgrade in Next.js 15 optimizes edge rendering?",
     options: [
-      "No difference",
-      "'let' is block-scoped, 'const' is function-scoped",
-      "'const' cannot be reassigned, 'let' can be",
-      "'let' is faster than 'const'",
+      "Streaming support for SSR",
+      "On-demand Incremental Static Regeneration",
+      "Middleware integration with Edge API Routes",
     ],
-    correctAnswer: "'const' cannot be reassigned, 'let' can be",
+    correctAnswer: "Streaming support for SSR",
   },
   {
     id: 6,
-    question: "What is Redux used for?",
+    question:
+      "What is the default data fetching strategy in the `app` directory in Next.js 14?",
     options: [
-      "Database management",
-      "State management",
-      "Server-side rendering",
-      "API calls",
+      "Static Site Generation (SSG)",
+      "Server-side Rendering (SSR)",
+      "React Server Components",
     ],
-    correctAnswer: "State management",
+    correctAnswer: "React Server Components",
   },
   {
     id: 7,
-    question: "What is the virtual DOM?",
+    question: "How can you enable TurboPack in Next.js 14?",
     options: [
-      "A fake DOM that doesn't exist",
-      "A lightweight copy of the actual DOM",
-      "A DOM for virtual reality",
-      "A backup of the DOM",
+      "Set `turbo: true` in `next.config.js`",
+      "Run `next dev --turbo`",
+      "It is enabled by default",
     ],
-    correctAnswer: "A lightweight copy of the actual DOM",
+    correctAnswer: "Run `next dev --turbo`",
   },
   {
     id: 8,
-    question: "What is a Promise in JavaScript?",
+    question:
+      "Which of the following features is NOT supported in the `app` directory?",
     options: [
-      "A guarantee to pay money",
-      "An object representing eventual completion of an async operation",
-      "A type of function",
-      "A way to promise code will work",
+      "Client components",
+      "Middleware",
+      "Dynamic routing using `[param]`",
     ],
-    correctAnswer:
-      "An object representing eventual completion of an async operation",
+    correctAnswer: "Middleware",
   },
   {
     id: 9,
-    question: "What is the purpose of TypeScript?",
+    question:
+      "What is the purpose of the `generateStaticParams` function in Next.js 14?",
     options: [
-      "To make JavaScript slower",
-      "To add static typing to JavaScript",
-      "To replace JavaScript",
-      "To make websites prettier",
+      "To define dynamic routes for static generation",
+      "To fetch data at runtime for client components",
+      "To optimize static file imports",
     ],
-    correctAnswer: "To add static typing to JavaScript",
+    correctAnswer: "To define dynamic routes for static generation",
   },
   {
     id: 10,
-    question: "What is a pure function?",
+    question:
+      "What command is used to enable experimental features in Next.js 15?",
     options: [
-      "A function written purely in JavaScript",
-      "A function that always returns the same output for the same input",
-      "A function without bugs",
-      "A function that only uses pure JavaScript features",
+      "Add `experimental` config in `next.config.js`",
+      "Run `next build --experimental`",
+      "Add a `.experimental` file to the root directory",
     ],
-    correctAnswer:
-      "A function that always returns the same output for the same input",
+    correctAnswer: "Add `experimental` config in `next.config.js`",
   },
   {
     id: 11,
-    question: "What is the purpose of useCallback in React?",
+    question:
+      "What caching mechanism does Next.js 15 use by default for Edge Routes?",
     options: [
-      "To memoize functions",
-      "To create callbacks",
-      "To handle errors",
-      "To manage state",
+      "No-store caching",
+      "Stale-while-revalidate (SWR)",
+      "On-demand caching",
     ],
-    correctAnswer: "To memoize functions",
+    correctAnswer: "Stale-while-revalidate (SWR)",
   },
   {
     id: 12,
-    question: "What is the difference between null and undefined?",
+    question:
+      "What improvement was introduced in the `next/image` component in Next.js 14?",
     options: [
-      "They are exactly the same",
-      "undefined means a variable is declared but not assigned, null is an assigned value",
-      "null is used in TypeScript, undefined in JavaScript",
-      "undefined is used in TypeScript, null in JavaScript",
+      "Native lazy loading",
+      "Enhanced WebP support",
+      "Automatic handling of AVIF format",
     ],
-    correctAnswer:
-      "undefined means a variable is declared but not assigned, null is an assigned value",
+    correctAnswer: "Automatic handling of AVIF format",
   },
   {
     id: 13,
-    question: "What is the purpose of useMemo in React?",
+    question: "What new API in Next.js 15 enhances SEO performance?",
     options: [
-      "To create memos",
-      "To memoize values",
-      "To remember user inputs",
-      "To cache API responses",
+      "Static Metadata API",
+      "Dynamic Metadata API",
+      "Headless Metadata API",
     ],
-    correctAnswer: "To memoize values",
+    correctAnswer: "Static Metadata API",
   },
   {
     id: 14,
-    question: "What is event bubbling?",
+    question:
+      "How can you transition between server and client components in the `app` directory?",
     options: [
-      "Creating new events",
-      "The process of event propagation from child to parent elements",
-      "A way to prevent events",
-      "A type of event handling",
+      "Using the `useClient` directive",
+      "By wrapping with a special `<ServerOnly>` component",
+      "By nesting components inside `pages/api`",
     ],
-    correctAnswer:
-      "The process of event propagation from child to parent elements",
+    correctAnswer: "Using the `useClient` directive",
   },
   {
     id: 15,
-    question: "What is the purpose of the useRef hook?",
+    question:
+      "What new feature in Next.js 15 improves analytics and monitoring?",
     options: [
-      "To create references to DOM elements",
-      "To refer to other components",
-      "To reference external libraries",
-      "To create references to functions",
+      "Native telemetry support",
+      "Built-in Sentry integration",
+      "New `Analytics.js` package",
     ],
-    correctAnswer: "To create references to DOM elements",
+    correctAnswer: "Native telemetry support",
+  },
+  {
+    id: 16,
+    question: "What is the purpose of the `middleware.js` file in Next.js 15?",
+    options: [
+      "To define middleware for API routes",
+      "To add custom logic before rendering or routing",
+      "To cache assets dynamically",
+    ],
+    correctAnswer: "To add custom logic before rendering or routing",
+  },
+  {
+    id: 17,
+    question:
+      "What is a significant feature of the `app` directory compared to `pages`?",
+    options: [
+      "Support for layouts and nested routing",
+      "Automatic TypeScript integration",
+      "Direct database connection support",
+    ],
+    correctAnswer: "Support for layouts and nested routing",
+  },
+  {
+    id: 18,
+    question: "How does Next.js 14 handle streaming data?",
+    options: [
+      "Using React Suspense and Server Components",
+      "With a dedicated streaming API",
+      "By enabling WebSocket support",
+    ],
+    correctAnswer: "Using React Suspense and Server Components",
+  },
+  {
+    id: 19,
+    question: "What is a key advantage of the `app` directory?",
+    options: [
+      "Full support for server-only components",
+      "Backward compatibility with older Next.js versions",
+      "Improved compatibility with CSS-in-JS libraries",
+    ],
+    correctAnswer: "Full support for server-only components",
+  },
+  {
+    id: 20,
+    question: "What is the role of `React Server Components` in Next.js 14+?",
+    options: [
+      "To replace static site generation",
+      "To enable faster server-side rendering",
+      "To allow server-rendered components within React applications",
+    ],
+    correctAnswer:
+      "To allow server-rendered components within React applications",
   },
 ];
 

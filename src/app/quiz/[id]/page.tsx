@@ -67,7 +67,7 @@ const QuizPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-blue-100 p-4">
       <div className="text-center">
-        <Timer duration={1200} onTimeUp={handleTimeUp} />
+        <Timer duration={900} onTimeUp={handleTimeUp} />
         <h1 className="text-4xl font-bold text-blue-700 mt-4 mb-6">
           Fun Quiz Challenge
         </h1>

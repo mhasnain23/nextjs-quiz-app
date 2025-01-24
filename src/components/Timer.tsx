@@ -20,8 +20,8 @@ const Timer: React.FC<TimerProps> = ({ duration, onTimeUp }) => {
   const minutes = Math.floor(timeLeft / 60);
   const seconds = timeLeft % 60;
   return (
-    <div className="fixed top-4 right-4 bg-white shadow-lg rounded-lg px-4 py-2 border">
-      <div className="text-xl font-semibold">
+    <div className="mb-5 max-w-6xl mx-auto py-10 flex items-center justify-center">
+      <div className="text-xl font-semibold bg-white shadow-sm w-20 rounded-lg py-4 px-3">
         {String(minutes).padStart(2, "0")}:{String(seconds).padStart(2, "0")}
       </div>
     </div>
