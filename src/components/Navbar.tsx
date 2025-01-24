@@ -1,4 +1,3 @@
-// import { quizzes } from "@/data/index";
 import {
   DropdownMenu,
   DropdownMenuTrigger,
